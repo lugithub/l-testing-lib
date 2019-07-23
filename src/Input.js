@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { useDebounce } from 'use-debounce';
 
-jest.useFakeTimers();
-
 export default function Input() {
   const [text, setText] = useState('Hello');
-  const [value] = useDebounce(text, 100);
+  const [value] = useDebounce(text, 1000);
 
   return (
     <div>
