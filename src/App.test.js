@@ -15,7 +15,7 @@ afterEach(cleanup);
 
 it('renders without crashing', () => {
   const { getByTestId, getByText } = render(<App />);
-  const input = getByTestId('username-input');
+  const input = getByTestId('input1');
 
   fireEvent.change(input, { target: { value: '111' } });
   jest.runAllTimers();
@@ -25,7 +25,7 @@ it('renders without crashing', () => {
 
 it('renders without crashing using userEvent', () => {
   const { getByTestId, getByText } = render(<App />);
-  const input = getByTestId('username-input');
+  const input = getByTestId('input1');
 
   userEvent.type(input, '111');
   jest.runAllTimers();

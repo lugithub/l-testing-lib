@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDebounce } from 'use-debounce';
+import { useDebounce, useDebouncedCallback } from 'use-debounce';
 
 export default function Input() {
   const [text, setText] = useState('Hello');
@@ -8,7 +8,7 @@ export default function Input() {
   return (
     <div>
       <input
-        data-testid="username-input"
+        data-testid="input1"
         defaultValue={'Hello'}
         onChange={e => {
           setText(e.target.value);
